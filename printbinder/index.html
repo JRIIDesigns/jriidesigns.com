@@ -11,8 +11,8 @@
 <meta property="og:title" content="PrintBinder, by JRII Designs">
 <meta property="og:description" content="A free, open-source Windows program for browsing and organising a 3D-printing library. Nothing moves without your approval.">
 <meta property="og:url" content="https://jriidesigns.com/printbinder/">
-<meta property="og:image" content="https://jriidesigns.com/assets/printbinder-icon-512.png">
-<meta property="og:image:alt" content="PrintBinder icon: two green binders on navy">
+<meta property="og:image" content="https://jriidesigns.com/assets/video/printbinder-01-browse-light.jpg">
+<meta property="og:image:alt" content="PrintBinder showing a library of 3D models as preview pictures">
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/site.css">
@@ -47,33 +47,64 @@
 
 <main id="main">
 
-  <section aria-labelledby="shots">
+  <section aria-labelledby="tour">
     <div class="wrap">
-      <h2 id="shots">A look at it</h2>
-      <div class="shots">
-        <figure>
-          <a href="../assets/shots/gallery.png"><img src="../assets/shots/gallery.png" width="1440" height="900" loading="lazy" alt="PrintBinder showing a folder of five models as preview pictures, with the folder list on the left"></a>
-          <figcaption>The gallery: a folder of models with preview pictures, and the folder list on the left.</figcaption>
-        </figure>
-        <figure>
-          <a href="../assets/shots/viewer-3d.png"><img src="../assets/shots/viewer-3d.png" width="1440" height="900" loading="lazy" alt="A model open in the 3D viewer, with its measured size, printer and material beside it"></a>
-          <figcaption>The 3D view: a model open with its measured size.</figcaption>
-        </figure>
-        <figure>
-          <a href="../assets/shots/review.png"><img src="../assets/shots/review.png" width="1440" height="900" loading="lazy" alt="The Review screen: four suggested moves with Approve buttons, and duplicates below"></a>
-          <figcaption>Review: suggested moves, duplicates and names waiting for approval, with the history and Undo.</figcaption>
-        </figure>
-        <figure>
-          <a href="../assets/shots/zip.png"><img src="../assets/shots/zip.png" width="1440" height="900" loading="lazy" alt="A zip file opened to show six models inside with previews, without unpacking"></a>
-          <figcaption>A zip opened to show what is inside, without unpacking.</figcaption>
-        </figure>
+      <div class="tour-head">
+        <h2 id="tour">See it work</h2>
+        <div class="themepick" role="group" aria-label="Clips shown in">
+          <button type="button" data-theme="light" aria-pressed="true">Light</button><button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        </div>
       </div>
+      <p class="prose">Half a minute of the whole thing, then one short clip for each feature. No sound and no slides: this is the program itself, running on a folder of real models.</p>
+      <video class="clip clip-hero" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="highlights" poster="../assets/video/printbinder-highlights-light.jpg" aria-label="A half-minute tour: the gallery, a model in 3D, Review, a zip opened, a model sent to the slicer, and the library on a phone"><source src="../assets/video/printbinder-highlights-light.mp4" type="video/mp4"></video>
+      <ol class="tour">
+        <li class="tour-item" id="browse">
+          <div class="tour-text"><span class="num">01</span><h3>Browse your whole library</h3><p>Every STL, 3MF, OBJ and STEP file shows up as a preview picture, in the folders you already have. Flip between big pictures and a sortable details list, and search every folder at once.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="01-browse" poster="../assets/video/printbinder-01-browse-light.jpg" aria-label="The gallery scrolling through folders of models, switching to a details list, then a search for the word dragon"><source src="../assets/video/printbinder-01-browse-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="3d-viewer">
+          <div class="tour-text"><span class="num">02</span><h3>Look at a model in 3D</h3><p>Open any model and turn it around. PrintBinder reads its real size, and for 3MF files the printer and material it was sliced for, so you can check a file before it goes anywhere near the printer.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="02-3d-viewer" poster="../assets/video/printbinder-02-3d-viewer-light.jpg" aria-label="Three models opened in the 3D viewer and turned around, with their measured size beside them"><source src="../assets/video/printbinder-02-3d-viewer-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="send-to-slicer">
+          <div class="tour-text"><span class="num">03</span><h3>Send it to your slicer</h3><p>PrintBinder finds the slicers installed on your computer. Add the ones you use once, and one click opens a model in Creality Print, Bambu Studio, OrcaSlicer or whichever you chose.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="03-send-to-slicer" poster="../assets/video/printbinder-03-send-to-slicer-light.jpg" aria-label="A slicer being added from the list PrintBinder found, then a model opening on the plate in Creality Print"><source src="../assets/video/printbinder-03-send-to-slicer-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="review">
+          <div class="tour-text"><span class="num">04</span><h3>Review, then approve</h3><p>Review lists loose files that look like they belong in one of your folders, and exact byte-for-byte duplicates. Each one waits for you. Nothing is moved, renamed or removed until you press its button.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="04-review" poster="../assets/video/printbinder-04-review-light.jpg" aria-label="The Review screen: two suggested moves approved one at a time, then a duplicate removed, and the history below"><source src="../assets/video/printbinder-04-review-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="undo">
+          <div class="tour-text"><span class="num">05</span><h3>Undo anything</h3><p>Remove never deletes: the file goes to a holding folder inside your library. Every move, rename and removal is kept in a history, and each one can be put back.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="05-undo" poster="../assets/video/printbinder-05-undo-light.jpg" aria-label="A model removed with a right-click, then brought back with Undo"><source src="../assets/video/printbinder-05-undo-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="downloads">
+          <div class="tour-text"><span class="num">06</span><h3>Sort your Downloads</h3><p>Add Downloads, another drive or a cloud folder as another location and its models show beside your library. Send one to the folder it belongs in: it is copied, compared byte for byte, and only then removed from where it was.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="06-downloads" poster="../assets/video/printbinder-06-downloads-light.jpg" aria-label="A model in the Downloads folder being moved into a folder of the library"><source src="../assets/video/printbinder-06-downloads-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="zip-files">
+          <div class="tour-text"><span class="num">07</span><h3>Look inside zip files</h3><p>A zip shows as a package with a count of the models inside. Open it to see what is in there, with previews, without unpacking anything. Take out only the files you want, each one checked against the zip.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="07-zip-files" poster="../assets/video/printbinder-07-zip-files-light.jpg" aria-label="A zip file opened to show six models, and two of them taken out into a folder beside it"><source src="../assets/video/printbinder-07-zip-files-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="ai-optional">
+          <div class="tour-text"><span class="num">08</span><h3>AI help, only if you want it</h3><p>The AI features are off until you enter your own key for Claude, ChatGPT or Gemini. Keys stay on your computer, encrypted by Windows. Something is sent only when you press a button, and your model files are never sent.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="08-ai-optional" poster="../assets/video/printbinder-08-ai-optional-light.jpg" aria-label="The AI assistant panel with its three key boxes, and the privacy page that says what is sent and when"><source src="../assets/video/printbinder-08-ai-optional-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="phone">
+          <div class="tour-text"><span class="num">09</span><h3>Your library on your phone</h3><p>Switch on Phone access, pair with a one-time code, and browse the same library from your phone’s browser, 3D view included. Home network only, not encrypted, and off until you switch it on.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="09-phone" poster="../assets/video/printbinder-09-phone-light.jpg" aria-label="Phone access being switched on, then a phone pairing with the code and opening a model in 3D"><source src="../assets/video/printbinder-09-phone-light.mp4" type="video/mp4"></video>
+        </li>
+        <li class="tour-item" id="usb">
+          <div class="tour-text"><span class="num">10</span><h3>Bring in a USB stick</h3><p>Plug in a USB drive that holds 3D files and PrintBinder offers to copy or move them into your library, into a dated folder. Files you already have are skipped, and the import can be undone.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="10-usb" poster="../assets/video/printbinder-10-usb-light.jpg" aria-label="A bar offering to import five models from a USB drive, and the models arriving in a dated folder"><source src="../assets/video/printbinder-10-usb-light.mp4" type="video/mp4"></video>
+        </li>
+      </ol>
     </div>
   </section>
 
   <section aria-labelledby="does">
     <div class="wrap">
-      <h2 id="does">What it does</h2>
+      <h2 id="does">Everything it does</h2>
       <p class="prose">It works on the folders you already have. There is no account and no sign-in.</p>
       <ul class="grid">
         <li class="card">
@@ -225,5 +256,28 @@
     <p>PrintBinder is MIT licensed.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var clips = [].slice.call(document.querySelectorAll('video.clip')), btns = [].slice.call(document.querySelectorAll('.themepick button'));
+  var saved = null; try { saved = localStorage.getItem('clip-theme'); } catch (e) {}
+  var theme = saved || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function set(t) {
+    theme = t;
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme') === t)); });
+    clips.forEach(function (v) {
+      var base = '../assets/video/printbinder-' + v.getAttribute('data-clip') + '-' + t, playing = !v.paused;
+      v.poster = base + '.jpg';
+      if (v.getAttribute('data-src') !== base) { v.setAttribute('data-src', base); v.innerHTML = '<source src="' + base + '.mp4" type="video/mp4">'; v.load(); if (playing) v.play().catch(function () {}); }
+    });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { var t = b.getAttribute('data-theme'); try { localStorage.setItem('clip-theme', t); } catch (e) {} set(t); }); });
+  set(theme);
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.intersectionRatio >= 0.6) { if (!v.hasAttribute('data-stopped')) v.play().catch(function () {}); } else if (!v.paused) { v.pause(); } }); }, { threshold: [0, 0.6] });
+    clips.forEach(function (v) { io.observe(v); v.addEventListener('pause', function () { if (v.matches(':hover')) v.setAttribute('data-stopped', ''); }); v.addEventListener('play', function () { v.removeAttribute('data-stopped'); }); });
+  }
+})();
+</script>
 </body>
 </html>
