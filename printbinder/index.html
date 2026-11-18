@@ -98,6 +98,10 @@
           <div class="tour-text"><span class="num">10</span><h3>Bring in a USB stick</h3><p>Plug in a USB drive that holds 3D files and PrintBinder offers to copy or move them into your library, into a dated folder. Files you already have are skipped, and the import can be undone.</p></div>
           <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="10-usb" poster="../assets/video/printbinder-10-usb-light.jpg" aria-label="A bar offering to import five models from a USB drive, and the models arriving in a dated folder"><source src="../assets/video/printbinder-10-usb-light.mp4" type="video/mp4"></video>
         </li>
+        <li class="tour-item" id="find-models">
+          <div class="tour-text"><span class="num">11</span><h3>Find models without leaving</h3><p>Find models opens a window for Printables, MakerWorld, Creality Cloud, Thingiverse, or any site you type in and save. Press a download button there and the model lands in your library’s unsorted folder, ready for Review. That window is walled off from the rest of PrintBinder, and nothing you download is opened or run.</p></div>
+          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="11-find-models" poster="../assets/video/printbinder-11-find-models-light.jpg" aria-label="The Find models window opening a model page on Printables, a download, and the model appearing in the library"><source src="../assets/video/printbinder-11-find-models-light.mp4" type="video/mp4"></video>
+        </li>
       </ol>
     </div>
   </section>
@@ -260,6 +264,29 @@
     <p>PrintBinder is MIT licensed.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var clips = [].slice.call(document.querySelectorAll('video.clip')), btns = [].slice.call(document.querySelectorAll('.themepick button'));
+  var saved = null; try { saved = localStorage.getItem('clip-theme'); } catch (e) {}
+  var theme = saved || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function set(t) {
+    theme = t;
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme') === t)); });
+    clips.forEach(function (v) {
+      var base = '../assets/video/printbinder-' + v.getAttribute('data-clip') + '-' + t, playing = !v.paused;
+      v.poster = base + '.jpg';
+      if (v.getAttribute('data-src') !== base) { v.setAttribute('data-src', base); v.innerHTML = '<source src="' + base + '.mp4" type="video/mp4">'; v.load(); if (playing) v.play().catch(function () {}); }
+    });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { var t = b.getAttribute('data-theme'); try { localStorage.setItem('clip-theme', t); } catch (e) {} set(t); }); });
+  set(theme);
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.intersectionRatio >= 0.6) { if (!v.hasAttribute('data-stopped')) v.play().catch(function () {}); } else if (!v.paused) { v.pause(); } }); }, { threshold: [0, 0.6] });
+    clips.forEach(function (v) { io.observe(v); v.addEventListener('pause', function () { if (v.matches(':hover')) v.setAttribute('data-stopped', ''); }); v.addEventListener('play', function () { v.removeAttribute('data-stopped'); }); });
+  }
+})();
+</script>
 <script>
 (function () {
   var clips = [].slice.call(document.querySelectorAll('video.clip')), btns = [].slice.call(document.querySelectorAll('.themepick button'));
