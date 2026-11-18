@@ -33,6 +33,7 @@
   <div class="wrap hero hero-app">
     <img src="../assets/printbinder-icon.png" width="256" height="256" alt="PrintBinder icon: two green binders on navy">
     <div>
+      <p class="newpill"><a href="#new"><span class="newbadge">New</span> 2.2.1: a built-in browser for model sites <span aria-hidden="true">&darr;</span></a></p>
       <h1>PrintBinder</h1>
       <p class="byline">by <a href="../index.html">JRII Designs</a></p>
       <p class="lead">A free Windows program for browsing and organising a 3D-printing library. It shows every model you have with a preview picture, opens models in 3D, and helps you bring files scattered over folders and drives into one tidy library.</p>
@@ -47,6 +48,31 @@
 
 <main id="main">
 
+  <!-- new:start -->
+  <section class="newfeat" id="new" aria-labelledby="newh">
+    <div class="wrap">
+      <div class="newcard">
+        <div class="newtext">
+          <p class="newline"><span class="newbadge">New</span><span class="newver">Version 2.2.1 &middot; released 18 November 2026</span></p>
+          <h2 id="newh">A browser, built in. Models go straight into your library.</h2>
+          <p class="newlead">Press <strong>Find models</strong> and browse Printables, MakerWorld, Creality Cloud and Thingiverse without leaving PrintBinder. Hit download on any of them and the model is in your library before you have switched windows.</p>
+          <ul class="newlist">
+            <li><strong>The big four, one click away.</strong> And any other site: type its address, press Save site, and it joins the start page.</li>
+            <li><strong>Sign in like you always do.</strong> Google sign-in works, and your sign-ins stay on your computer.</li>
+            <li><strong>Downloads file themselves.</strong> They land in your library's unsorted folder, with a preview, ready for Review to suggest a home.</li>
+            <li><strong>Walled off.</strong> Those pages cannot see your library, your files or your AI keys, and nothing you download is opened or run.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/JRIIDesigns/printbinder/releases/latest">Get 2.2.1</a>
+            <span class="newhint">Already have PrintBinder? Help &gt; Check for updates.</span>
+          </div>
+        </div>
+        <video class="clip clip-new" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="11-find-models" poster="../assets/video/printbinder-11-find-models-light.jpg" aria-label="The Find models window opening a model page on Printables, a download, and the model appearing in the library"><source src="../assets/video/printbinder-11-find-models-light.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+  </section>
+  <!-- new:end -->
+
   <section aria-labelledby="tour">
     <div class="wrap">
       <div class="tour-head">
@@ -55,7 +81,7 @@
           <button type="button" data-theme="light" aria-pressed="true">Light</button><button type="button" data-theme="dark" aria-pressed="false">Dark</button>
         </div>
       </div>
-      <p class="prose">Half a minute of the whole thing, then one short clip for each feature. No sound and no slides: this is the program itself, running on a folder of real models.</p>
+      <p class="prose">Half a minute of the whole thing, then one short clip for each of the other features. No sound and no slides: this is the program itself, running on a folder of real models.</p>
       <video class="clip clip-hero" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="highlights" poster="../assets/video/printbinder-highlights-light.jpg" aria-label="A half-minute tour: the gallery, a model in 3D, Review, a zip opened, a model sent to the slicer, and the library on a phone"><source src="../assets/video/printbinder-highlights-light.mp4" type="video/mp4"></video>
       <ol class="tour">
         <li class="tour-item" id="browse">
@@ -97,10 +123,6 @@
         <li class="tour-item" id="usb">
           <div class="tour-text"><span class="num">10</span><h3>Bring in a USB stick</h3><p>Plug in a USB drive that holds 3D files and PrintBinder offers to copy or move them into your library, into a dated folder. Files you already have are skipped, and the import can be undone.</p></div>
           <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="10-usb" poster="../assets/video/printbinder-10-usb-light.jpg" aria-label="A bar offering to import five models from a USB drive, and the models arriving in a dated folder"><source src="../assets/video/printbinder-10-usb-light.mp4" type="video/mp4"></video>
-        </li>
-        <li class="tour-item" id="find-models">
-          <div class="tour-text"><span class="num">11</span><h3>Find models without leaving</h3><p>Find models opens a window for Printables, MakerWorld, Creality Cloud, Thingiverse, or any site you type in and save. Press a download button there and the model lands in your library’s unsorted folder, ready for Review. That window is walled off from the rest of PrintBinder, and nothing you download is opened or run.</p></div>
-          <video class="clip" controls muted loop playsinline preload="none" width="1920" height="1080" data-clip="11-find-models" poster="../assets/video/printbinder-11-find-models-light.jpg" aria-label="The Find models window opening a model page on Printables, a download, and the model appearing in the library"><source src="../assets/video/printbinder-11-find-models-light.mp4" type="video/mp4"></video>
         </li>
       </ol>
     </div>
