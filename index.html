@@ -17,10 +17,10 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="band">
+<header class="band band-glow">
   <div class="wrap topbar">
     <a class="name" href="index.html" aria-current="page">JRII Designs</a>
     <nav aria-label="Site">
@@ -36,6 +36,10 @@
     <img src="assets/jrii-designs.png" width="324" height="200" alt="JRII Designs">
     <h1>I design things in 3D, then build them.</h1>
     <p class="lead">JRII Designs is everything I make outside of work, much of it with AI assistance: printable models, software, and 3D models of real buildings.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#projects">See the projects</a>
+      <a class="btn btn-ghost" href="#models">Browse the models</a>
+    </div>
   </div>
 </header>
 
@@ -44,11 +48,18 @@
   <section aria-labelledby="about">
     <div class="wrap">
       <h2 id="about">About</h2>
-      <div class="prose">
-        <p>I'm Ben, and JRII Designs is what I do outside of work.</p>
-        <p>It started with 3D printing: things I actually need, like a holder for this, a shelf for that, a fix for whatever is annoying me that week. Once a model works, I give it away. Every model I publish is free, and so is PrintBinder.</p>
-        <p>It has grown from there. Now it is also software, a 3D walkthrough of real buildings, and tools I build because I want them to exist. I do it because making things is fun.</p>
-        <p>Much of it is AI assisted. Some of my models I drew entirely myself. Others, along with the software and the walkthrough, were made with an AI assistant helping me design, write and build. The ideas and the decisions are mine.</p>
+      <div class="about-grid">
+        <div class="prose">
+          <p>I'm Ben, and JRII Designs is what I do outside of work.</p>
+          <p>It started with 3D printing: things I actually need, like a holder for this, a shelf for that, a fix for whatever is annoying me that week. Once a model works, I give it away. Every model I publish is free, and so is PrintBinder.</p>
+          <p>It has grown from there. Now it is also software, a 3D walkthrough of real buildings, and tools I build because I want them to exist. I do it because making things is fun.</p>
+          <p>Much of it is AI assisted. Some of my models I drew entirely myself. Others, along with the software and the walkthrough, were made with an AI assistant helping me design, write and build. The ideas and the decisions are mine.</p>
+        </div>
+        <ul class="stats" aria-label="At a glance">
+          <li><strong>14</strong><span>free printable models</span></li>
+          <li><strong>3</strong><span>projects under way</span></li>
+          <li><strong>2</strong><span>buildings modelled in 3D</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -57,24 +68,35 @@
     <div class="wrap">
       <h2 id="projects">Projects</h2>
       <p class="prose">Three things I am working on in my own time right now, all built with AI assistance. Each one lives on its own; this page is the way in.</p>
-      <ul class="grid">
-        <li class="card">
-          <p><span class="tag">Free software</span></p>
-          <h3>PrintBinder</h3>
-          <p>A free Windows program for browsing and organising a 3D-printing library. It shows every model with a preview picture, opens models in 3D, and never moves, renames or removes anything you have not approved.</p>
-          <p class="newpill newpill-card"><a href="printbinder/index.html#new"><span class="newbadge">New</span> 2.2.3: a built-in browser</a></p>
-          <p><a class="btn btn-primary" href="printbinder/index.html">See PrintBinder</a></p>
+      <ul class="grid proj-grid">
+        <li class="card proj">
+          <div class="proj-media proj-media-icon"><img src="assets/printbinder-icon.png" width="256" height="256" alt="PrintBinder icon: two green binders on navy"></div>
+          <div class="proj-body">
+            <p><span class="tag">Free software</span></p>
+            <h3>PrintBinder</h3>
+            <p>A free Windows program for browsing and organising a 3D-printing library. It shows every model with a preview picture, opens models in 3D, and never moves, renames or removes anything you have not approved.</p>
+            <p class="newpill newpill-card"><a href="printbinder/index.html#new"><span class="newbadge">New</span> 2.2.3: a built-in browser</a></p>
+          </div>
+          <p class="proj-foot"><a class="btn btn-primary" href="printbinder/index.html">See PrintBinder</a></p>
         </li>
-        <li class="card">
-          <p><span class="tag">3D walkthrough</span></p>
-          <h3>Cobblestone on the Lake</h3>
-          <p>A 3D model of two buildings in Fort Myers, made from the architectural plans. Walk through the apartments, townhomes, garages and stairs in your browser, on a computer or a phone.</p>
-          <p><a class="btn btn-primary" href="https://cobblestone-on-the-lake.pages.dev/" rel="noopener">Open the walkthrough</a></p>
+        <li class="card proj">
+          <div class="proj-media"><img src="assets/cobblestone-walkthrough.jpg" width="800" height="450" loading="lazy" alt="3D model of a three-storey townhome building with balconies and a clay tile roof"></div>
+          <div class="proj-body">
+            <p><span class="tag">3D walkthrough</span></p>
+            <h3>Cobblestone on the Lake</h3>
+            <p>A 3D model of two buildings in Fort Myers, made from the architectural plans. Walk through the apartments, townhomes, garages and stairs in your browser, on a computer or a phone.</p>
+          </div>
+          <p class="proj-foot"><a class="btn btn-primary" href="https://cobblestone-on-the-lake.pages.dev/" rel="noopener">Open the walkthrough</a></p>
         </li>
-        <li class="card">
-          <p><span class="tag">Private, in testing</span></p>
-          <h3>Rent Manager connector</h3>
-          <p>An in-house connector I developed that lets an AI assistant work with Rent Manager, the property management software. It is private and I am testing it now, so there is nothing to download.</p>
+        <li class="card proj">
+          <div class="proj-media proj-media-icon">
+            <svg viewBox="0 0 96 96" role="img" aria-label="Two boxes joined by a link" fill="none" stroke="#9ddc2f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="32" width="30" height="32" rx="7"/><rect x="58" y="32" width="30" height="32" rx="7"/><path d="M38 48h20" stroke="#5ab0d4"/><circle cx="23" cy="48" r="4" fill="#9ddc2f"/><circle cx="73" cy="48" r="4" fill="#9ddc2f"/></svg>
+          </div>
+          <div class="proj-body">
+            <p><span class="tag">Private, in testing</span></p>
+            <h3>Rent Manager connector</h3>
+            <p>An in-house connector I developed that lets an AI assistant work with Rent Manager, the property management software. It is private and I am testing it now, so there is nothing to download.</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -85,7 +107,7 @@
       <h2 id="models">3D-printable models</h2>
       <p class="prose">I publish as JRII Designs on Creality Cloud, where I am a verified modeler. Some of these I drew entirely myself and some were AI assisted. Download anything, print it, change it, make it better.</p>
       <p><a class="btn btn-primary" href="https://www.crealitycloud.com/user/4278619749/model" rel="noopener">See all models on Creality Cloud</a></p>
-      <ul class="model-list">
+      <ul class="model-list chips">
         <li><a href="https://www.crealitycloud.com/model-detail/ghost-face-candle-holder-multi-color" rel="noopener">Ghost Face Candle Holder, multi-colour</a></li>
         <li><a href="https://www.crealitycloud.com/model-detail/desiccant-dry-box" rel="noopener">Silica Gel Regeneration Tray</a></li>
         <li><a href="https://www.crealitycloud.com/model-detail/sushi-boat-table-centerpiece" rel="noopener">Sushi Boat, 24-inch table centerpiece</a></li>
