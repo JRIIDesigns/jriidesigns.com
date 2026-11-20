@@ -464,3 +464,8 @@ video.clip-new { border-color: rgba(255, 255, 255, 0.18); box-shadow: 0 10px 30p
   .proj { transition: none; }
   .proj:has(a.btn):hover { transform: none; }
 }
+
+/* The menu and hero buttons jump within the home page: glide there unless the visitor prefers no motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

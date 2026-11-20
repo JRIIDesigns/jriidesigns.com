@@ -1,16 +1,26 @@
 # jriidesigns-site
 
-The website for JRII Designs, meant for GitHub Pages at `jriidesigns.com`. The PrintBinder page is at `jriidesigns.com/printbinder`.
+The website for JRII Designs: the front door for everything Ben designs outside of work. Live at https://jriidesigns.com/ through GitHub Pages (`main` branch, root folder). The PrintBinder page is at `jriidesigns.com/printbinder`.
 
-Plain HTML and one CSS file. No build step, no scripts, no trackers, no outside fonts.
+Plain HTML and one CSS file. No build step, no trackers, no outside fonts. The home page has no scripts; the PrintBinder page has two small inline ones.
 
-**This is a first draft. It has not been published anywhere.**
+## How the site is meant to work
+
+This site only introduces and links. Each project lives on its own, wherever suits it:
+
+| Project | Where it lives | On this site |
+|---|---|---|
+| PrintBinder | GitHub (`JRIIDesigns/printbinder`) | Its own page here, `printbinder/` |
+| Cobblestone on the Lake 3D walkthrough | Its own hosting, https://cobblestone-on-the-lake.pages.dev/ | A card on the home page that links out |
+| Rent Manager connector | Private, in testing | A card on the home page, no link |
+
+Do not copy a project's files into this repository. Add a card and a link instead.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | JRII Designs home page |
+| `index.html` | JRII Designs home page: about, the three project cards, the model list, contact |
 | `printbinder/index.html` | The PrintBinder page |
 | `404.html` | Shown for a missing address |
 | `assets/site.css` | The one shared stylesheet (light and dark) |
@@ -47,9 +57,6 @@ PrintBinder page (`printbinder/index.html`):
 7. **Screenshot: Review**
 8. **Screenshot: a zip opened**
 
-Both pages:
-
-9. **`og:image`** uses a relative path. Before going live, change it to the full address (`https://jriidesigns.com/assets/...`). Each page has a `TODO` comment beside it. A wider picture made for link previews (1200 x 630) would look better than the logo or icon.
 
 ## Links that are not live yet
 
@@ -58,13 +65,11 @@ These are written into the pages and will not work until the things they point t
 - Download: `https://github.com/JRIIDesigns/printbinder/releases/latest`
 - Source: `https://github.com/JRIIDesigns/printbinder`
 - Feedback: `mailto:info@printbinder.com` (general contact on the home page: `mailto:ben@jriidesigns.com`)
-- `https://jriidesigns.com/` and `https://jriidesigns.com/printbinder/` in the `canonical` and `og:url` tags (the site itself)
 
-## Before publishing
+## Still to check
 
 - Fill the placeholders above.
 - Check the PrintBinder page against the program's own README once more, so the two say the same thing.
-- Point the domain at GitHub Pages and switch on HTTPS.
 
 ## Licence
 
