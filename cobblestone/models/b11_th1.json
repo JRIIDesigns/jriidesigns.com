@@ -1,0 +1,66 @@
+{
+  "name": "Building 11 - Townhome #1 (unit 105) - step 1 trace",
+  "units": "ft",
+  "source": "BLDM-063822-2026-ARCH r2.pdf, sheet A2.1 (second floor dimension plan), A6.1 (levels)",
+  "notes": [
+    "x runs across the unit between party-wall centrelines (0 to 24.68 ft); y runs from the front wall centreline (0) to the rear wall (26.68); z is height above ground finish floor.",
+    "status 'traced' = position taken from PDF linework; 'assumed' = position traced but a height or size is a placeholder; 'ghost' = not yet traced."
+  ],
+  "levels": [
+    { "name": "Ground (garage)", "z": 0.0 },
+    { "name": "Second floor", "z": 9.333 },
+    { "name": "Third floor", "z": 19.333 },
+    { "name": "Top of beam", "z": 28.667 }
+  ],
+  "walls": [
+    { "id": "party-left", "kind": "cmu", "status": "traced", "a": [0, -0.33], "b": [0, 27.0], "t": 0.64, "z0": 0, "z1": 28.667 },
+    { "id": "party-right", "kind": "cmu", "status": "traced", "a": [24.68, -0.33], "b": [24.68, 27.0], "t": 0.64, "z0": 0, "z1": 28.667 },
+    { "id": "rear", "kind": "stud", "status": "traced", "a": [0.32, 26.68], "b": [24.36, 26.68], "t": 0.5, "z0": 0, "z1": 28.667 },
+
+    { "id": "front-2", "kind": "cmu", "status": "assumed", "a": [0.32, 0], "b": [24.36, 0], "t": 0.64, "z0": 9.333, "z1": 19.333,
+      "openings": [
+        { "id": "stair window", "s": 0.33, "e": 3.99, "sill": 3.0, "head": 8.0, "kind": "window" },
+        { "id": "sliding glass door", "s": 13.51, "e": 21.51, "sill": 0, "head": 8.0, "kind": "glassdoor" }
+      ] },
+    { "id": "front-1", "kind": "ghost", "status": "ghost", "a": [0.32, 0], "b": [24.36, 0], "t": 0.64, "z0": 0, "z1": 9.333 },
+    { "id": "front-3", "kind": "ghost", "status": "ghost", "a": [0.32, 0], "b": [24.36, 0], "t": 0.64, "z0": 19.333, "z1": 28.667 },
+
+    { "id": "stair1-halfwall", "kind": "halfwall", "status": "traced", "a": [4.47, 0.32], "b": [4.47, 15.01], "t": 0.32, "z0": 9.333, "z1": 12.833 },
+    { "id": "foyer-stair2", "kind": "stud", "status": "traced", "a": [0.32, 19.2], "b": [10.04, 19.2], "t": 0.32, "z0": 9.333, "z1": 18.667 },
+    { "id": "stair2-halfwall", "kind": "halfwall", "status": "traced", "a": [3.32, 22.89], "b": [7.6, 22.89], "t": 0.3, "z0": 9.333, "z1": 12.833 },
+    { "id": "powder-front", "kind": "stud", "status": "assumed", "a": [7.76, 22.89], "b": [14.16, 22.89], "t": 0.3, "z0": 9.333, "z1": 18.667,
+      "openings": [ { "id": "powder door", "s": 2.76, "e": 5.24, "sill": 0, "head": 6.667, "kind": "door" } ] },
+    { "id": "powder-left", "kind": "stud", "status": "traced", "a": [7.76, 22.89], "b": [7.76, 26.42], "t": 0.5, "z0": 9.333, "z1": 18.667 },
+    { "id": "powder-back", "kind": "stud", "status": "traced", "a": [7.0, 26.12], "b": [14.57, 26.12], "t": 0.61, "z0": 9.333, "z1": 18.667 },
+    { "id": "powder-right", "kind": "stud", "status": "traced", "a": [14.16, 22.89], "b": [14.16, 26.42], "t": 0.3, "z0": 9.333, "z1": 18.667 },
+    { "id": "pantry-right", "kind": "stud", "status": "traced", "a": [17.13, 24.26], "b": [17.13, 26.42], "t": 0.32, "z0": 9.333, "z1": 18.667 },
+    { "id": "laundry-right", "kind": "stud", "status": "assumed", "a": [20.45, 24.2], "b": [20.45, 26.42], "t": 0.32, "z0": 9.333, "z1": 18.667 }
+  ],
+  "slabs": [
+    { "id": "ground slab", "kind": "concrete", "status": "traced", "z": 0, "t": 0.5, "poly": [[0, -0.33], [24.68, -0.33], [24.68, 27.0], [0, 27.0]] },
+    { "id": "second floor", "kind": "floor", "status": "traced", "z": 9.333, "t": 0.667, "poly": [[0, -0.33], [24.68, -0.33], [24.68, 27.0], [0, 27.0]],
+      "holes": [ [[0.32, 0.32], [4.31, 0.32], [4.31, 15.5], [0.32, 15.5]] ] },
+    { "id": "second floor balcony", "kind": "concrete", "status": "traced", "z": 9.333, "t": 0.667, "poly": [[11.35, -7.33], [24.68, -7.33], [24.68, -0.33], [11.35, -0.33]] },
+    { "id": "third floor", "kind": "ghostfloor", "status": "ghost", "z": 19.333, "t": 0.667, "poly": [[0, -0.33], [24.68, -0.33], [24.68, 27.0], [0, 27.0]],
+      "holes": [ [[0.32, 19.4], [10.0, 19.4], [10.0, 26.3], [0.32, 26.3]] ] }
+  ],
+  "stairs": [
+    { "id": "stair 1 (ground to second)", "status": "assumed", "start": [0.4, 3.0], "dir": [0, 1], "width": 3.85, "risers": 16, "tread": 0.8333, "z0": 0, "z1": 9.333 },
+    { "id": "stair 2 lower flight (second toward third)", "status": "assumed", "start": [9.4, 19.45], "dir": [-1, 0], "width": 3.3, "risers": 8, "tread": 0.8333, "z0": 9.333, "z1": 14.039,
+      "landing": [[0.32, 19.4], [3.57, 19.4], [3.57, 26.3], [0.32, 26.3]] }
+  ],
+  "rails": [
+    { "id": "balcony guard front", "a": [11.35, -7.2], "b": [24.68, -7.2], "z": 9.333, "h": 3.5 },
+    { "id": "balcony guard side", "a": [11.45, -7.2], "b": [11.45, -0.33], "z": 9.333, "h": 3.5 }
+  ],
+  "labels": [
+    { "text": "Family Room", "at": [10.5, 7.0], "z": 9.333 },
+    { "text": "Dining Room", "at": [18.5, 9.0], "z": 9.333 },
+    { "text": "Kitchen", "at": [18.5, 18.5], "z": 9.333 },
+    { "text": "Foyer", "at": [6.0, 17.2], "z": 9.333 },
+    { "text": "Powder", "at": [11.0, 24.6], "z": 9.333 },
+    { "text": "Balcony", "at": [18.0, -4.0], "z": 9.333 },
+    { "text": "Garage (not yet traced)", "at": [13.0, 13.0], "z": 0 }
+  ],
+  "spawn": { "at": [12.0, 8.0], "z": 9.333, "yawDeg": 180 }
+}

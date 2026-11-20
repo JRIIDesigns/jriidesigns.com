@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cobblestone on the Lake - 3D Walkthrough</title>
+    <meta name="description" content="Walk through Buildings 8 and 11 at Cobblestone on the Lake, Fort Myers, in 3D." />
+    <meta name="robots" content="noindex" />
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #cfd8e3; font-family: system-ui, "Segoe UI", sans-serif; }
+      canvas { display: block; }
+      #hud { position: fixed; left: 12px; top: 12px; background: rgba(20, 26, 34, 0.82); color: #eef2f6; padding: 10px 12px; border-radius: 8px; font-size: 13px; line-height: 1.45; max-width: 300px; }
+      #hud h1 { font-size: 14px; margin: 0 0 6px; }
+      #hud button { margin: 6px 6px 0 0; padding: 6px 10px; border: 0; border-radius: 6px; background: #3b82f6; color: #fff; font-size: 13px; cursor: pointer; }
+      #hud button.alt { background: #475569; }
+      #hud .key { display: inline-block; min-width: 14px; padding: 0 4px; border: 1px solid #8a97a8; border-radius: 4px; font-size: 11px; text-align: center; }
+      #status { position: fixed; left: 12px; bottom: 12px; background: rgba(20, 26, 34, 0.82); color: #eef2f6; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-variant-numeric: tabular-nums; }
+      #legend { position: fixed; right: 12px; top: 12px; background: rgba(20, 26, 34, 0.82); color: #eef2f6; padding: 8px 10px; border-radius: 8px; font-size: 12px; line-height: 1.6; }
+      #legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: -2px; }
+      #pad { position: fixed; right: 14px; bottom: 14px; display: none; grid-template-areas: ". u ." "l d r"; gap: 6px; touch-action: none; user-select: none; }
+      #pad button { width: 56px; height: 56px; border: 0; border-radius: 12px; background: rgba(20, 26, 34, 0.72); color: #fff; font-size: 20px; touch-action: none; }
+      #pad button:active { background: #3b82f6; }
+      @media (max-width: 600px) { #hud { max-width: 210px; font-size: 12px; } #status { max-width: calc(100vw - 230px); font-size: 11px; } }
+      #cross { position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: rgba(255,255,255,0.8); box-shadow: 0 0 0 1px rgba(0,0,0,0.5); display: none; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CF_62AJQ.js"></script>
+  </head>
+  <body>
+    <div id="hud">
+      <h1 id="title">Loading model...</h1>
+      <div id="help"></div>
+      <select id="pick" style="margin-top:6px;padding:5px 6px;border-radius:6px;border:0;font-size:13px;width:100%">
+        <option value="site">Both buildings on the site</option>
+        <option value="b11">Building 11 - townhomes</option>
+        <option value="b8">Building 8 - apartments</option>
+      </select>
+      <button id="btnWalk">Walk inside</button>
+      <button id="btnOrbit" class="alt">Overview</button>
+      <button id="btnRoof" class="alt">Cut away</button>
+    </div>
+    <div id="pad">
+      <button data-key="KeyW" style="grid-area:u" aria-label="Forward">&#9650;</button>
+      <button data-key="ArrowLeft" style="grid-area:l" aria-label="Turn left">&#9664;</button>
+      <button data-key="KeyS" style="grid-area:d" aria-label="Back">&#9660;</button>
+      <button data-key="ArrowRight" style="grid-area:r" aria-label="Turn right">&#9654;</button>
+    </div>
+    <div id="status"></div>
+    <div id="cross"></div>
+  </body>
+</html>

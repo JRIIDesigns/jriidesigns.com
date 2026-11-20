@@ -1,4 +1,4 @@
-# jriidesigns-site
+﻿# jriidesigns-site
 
 The website for JRII Designs, meant for GitHub Pages at `jriidesigns.com`. The PrintBinder page is at `jriidesigns.com/printbinder`.
 
@@ -12,6 +12,7 @@ Plain HTML and one CSS file. No build step, no scripts, no trackers, no outside 
 |---|---|
 | `index.html` | JRII Designs home page |
 | `printbinder/index.html` | The PrintBinder page |
+| `cobblestone/` | Cobblestone on the Lake 3D walkthrough (built files, published from a separate project; not linked from the home page, and marked noindex) |
 | `404.html` | Shown for a missing address |
 | `assets/site.css` | The one shared stylesheet (light and dark) |
 | `assets/jrii-designs.png` | JRII Designs logo |
@@ -67,4 +68,4 @@ These are written into the pages and will not work until the things they point t
 
 ## Licence
 
-© 2026 JRII Designs. PrintBinder is MIT licensed.
+Â© 2026 JRII Designs. PrintBinder is MIT licensed.
