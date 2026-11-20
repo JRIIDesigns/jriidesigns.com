@@ -1,4 +1,4 @@
-/* JRII Designs — one shared stylesheet. No external fonts, scripts or trackers.
+/* JRII Designs â€” one shared stylesheet. No external fonts, scripts or trackers.
    Navy and green are taken from the PrintBinder icon. */
 
 :root {
@@ -407,7 +407,8 @@ video.clip-new { border-color: rgba(255, 255, 255, 0.18); box-shadow: 0 10px 30p
   overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
-.proj:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(14, 34, 51, 0.18); border-color: var(--green-deep); }
+/* Only cards that lead somewhere lift on hover; the private project has no link. */
+.proj:has(a.btn):hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(14, 34, 51, 0.18); border-color: var(--green-deep); }
 .proj-media {
   aspect-ratio: 16 / 9;
   display: grid;
@@ -461,5 +462,5 @@ video.clip-new { border-color: rgba(255, 255, 255, 0.18); box-shadow: 0 10px 30p
 }
 @media (prefers-reduced-motion: reduce) {
   .proj { transition: none; }
-  .proj:hover { transform: none; }
+  .proj:has(a.btn):hover { transform: none; }
 }
