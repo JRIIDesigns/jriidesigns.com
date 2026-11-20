@@ -16,6 +16,7 @@ Plain HTML and one CSS file. No build step, no scripts, no trackers, no outside 
 | `assets/site.css` | The one shared stylesheet (light and dark) |
 | `assets/jrii-designs.png` | JRII Designs logo |
 | `assets/printbinder-icon.png`, `printbinder-icon-512.png` | PrintBinder icon (256 and 512 pixels) |
+| `assets/cobblestone-walkthrough.jpg` | Picture on the Cobblestone project card (a view from the 3D walkthrough) |
 | `assets/favicon.png`, `apple-touch-icon.png` | Small icons for browser tabs and phones |
 | `CNAME` | Tells GitHub Pages the domain: `jriidesigns.com` |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
